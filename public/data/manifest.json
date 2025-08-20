@@ -1,0 +1,16 @@
+{
+  "simulations": [
+    {
+      "slug": "2025-08-21_09-34-53",
+      "date": "2025-08-21",
+      "winner": "DevSamson11",
+      "thumb": "/media/2025-08-21_09-34-53.jpg",
+      "video": "/media/2025-08-21_09-34-53.mp4",
+      "stats": "/data/daily/2025-08-21_09-34-53.json",
+      "ranking": "/data/daily/ranking/2025-08-21_09-34-53_ranking.json",
+      "topKills": 10
+    }
+  ],
+  "nextBattle": null,
+  "contractAddress": null
+}
