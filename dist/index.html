@@ -529,14 +529,21 @@
       return 0;
     });
 
-    $('#simsList').innerHTML = sorted.map(sim => {
-      const time = sim.slug ? sim.slug.split('_')[1]?.replace(/-/g, ':') : '';
+    $('#simsList').innerHTML = sorted.map((sim, index) => {
+      let displayName;
+      if (index === 0) { // First item in sorted array
+        displayName = 'FCX 0';
+      } else {
+        const fcxNumber = index; // FCX 1, FCX 2, etc.
+        displayName = `FCX ${fcxNumber}`;
+      }
+      
       return `
         <div class="sim-item" data-slug="${sim.slug}" onclick="loadSimulation('${sim.slug}')">
-          ${sim.date || 'Unknown'} ${time}
+          ${displayName}
         </div>
       `;
-    }).join('');
+    }).join('');    
   }
 
   async function loadSimulation(slug){
